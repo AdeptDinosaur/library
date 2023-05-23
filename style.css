@@ -1,4 +1,89 @@
 * {
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    display:grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: 150px 1fr 1fr 1fr;
+}
+
+.header {
+    grid-area: 1 / 1 / 2 / 4;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border: 3px solid black;
+    background-image: linear-gradient(to bottom right, rgb(123, 255, 0), magenta );
+     
+}
+
+.formContainer {
+    grid-area: 2 / 1 / 5 / 2;
+    border: 3px solid black;
+    border-top: 0px;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, magenta, rgb(123, 255, 0) );
+    padding-top: 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+input {
+    border-radius: 5px;
+    background-color: bisque;
+}
+
+input[type="checkbox"] {
+    opacity: 75%;
+    accent-color: bisque;
+}
+
+#addBook {
+    margin-top: 15px;
+    width: 8em;
+    height: 3em;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: gray;
+    font-weight: bold;
+}
+
+.cardContainer {
+    grid-area: 2 / 2 / 5 / 4;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    background-image: linear-gradient(rgb(123, 255, 0), magenta);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    
+}
+
+.card {
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    margin: 1em;
+}
+
+.card button {
+    width: 8em;
+    height: 3em;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: gray;
+    font-weight: bold;
+}
